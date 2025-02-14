@@ -26,8 +26,28 @@ function countNumber(){
                 if(newCount==40){
                     newLevel = newLevel+1;
                 
-                    if(newCount==40){
+                    if(newCount==50){
                         newLevel = newLevel+1;
+                    
+                        if(newCount==60){
+                            newLevel = newLevel+1;
+                         
+                            if(newCount==70){
+                                newLevel = newLevel+1;
+                            
+                                if(newCount==80){
+                                    newLevel = newLevel+1;
+                                
+                                    if(newCount==90){
+                                        newLevel = newLevel+1;
+                                    
+                                        if(newCount==100){
+                                            newLevel = newLevel+1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
