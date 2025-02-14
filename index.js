@@ -7,62 +7,38 @@ let nextLevel = 0;
 
 
 function countNumber(){ 
-    let newCount = count++;
+    count = count+1;
 
     counterDiv.innerHTML = `
         <label for="counter">Numbers hit</label>
-        <h2>${newCount}</h2>
+        <h2>${count}</h2>
     `;
 
-    if(newCount==10){
-        let newLevel = nextLevel +1;
-
-        if(newCount==20){
-            newLevel = newLevel+1;
-        
-            if(newCount==30){
-                newLevel = newLevel+1;
-            
-                if(newCount==40){
-                    newLevel = newLevel+1;
-                
-                    if(newCount==50){
-                        newLevel = newLevel+1;
-                    
-                        if(newCount==60){
-                            newLevel = newLevel+1;
-                         
-                            if(newCount==70){
-                                newLevel = newLevel+1;
-                            
-                                if(newCount==80){
-                                    newLevel = newLevel+1;
-                                
-                                    if(newCount==90){
-                                        newLevel = newLevel+1;
-                                    
-                                        if(newCount==100){
-                                            newLevel = newLevel+1;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+    if(count==10){
+        nextLevel = nextLevel+1;
+    }else if(count==20){
+        nextLevel = nextLevel+1;
+    }else if(count==30){
+        nextLevel = nextLevel+1;
+    }else if(count==40){
+        nextLevel = nextLevel+1;
+    }else if(count==50){
+        nextLevel = nextLevel+1;
+    }else if(count==60){
+        nextLevel = nextLevel+1;
+    }else if(count==70){
+        nextLevel = nextLevel+1;
+    }else if(count==80){
+        nextLevel = nextLevel+1;
+    }else if(count==90){
+        nextLevel = nextLevel+1;
+    }else if(count==100){
+        nextLevel = nextLevel+1;
         }
-
-        
 
         counterDiv.innerHTML += `
             <label for="counterLevel">Level</label>
-            <h2>${newLevel}</h2>
+            <h2>${nextLevel}</h2>
         `; 
-
-       
-    }
-
- 
 }
 
