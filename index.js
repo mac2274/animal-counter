@@ -5,15 +5,23 @@ image.addEventListener('click', countNumber);
 let count = 0;
 let nextLevel = 0;
 
-
 function countNumber(){ 
     count = count+1;
 
-    counterDiv.innerHTML = `
-        <label for="counter">Numbers hit</label>
-        <h2>${count}</h2>
-    `;
+    insetHTML(); 
+    levelCount();
+}
 
+function insetHTML(){
+    counterDiv.innerHTML = `
+        <label for="counter">Hit</label>
+        <h2>${count}</h2>
+         <label for="counter">Level</label>
+        <h2>${nextLevel}</h2>
+    `;
+} 
+
+function levelCount(){
     if(count==10){
         nextLevel = nextLevel+1;
     }else if(count==20){
@@ -35,10 +43,5 @@ function countNumber(){
     }else if(count==100){
         nextLevel = nextLevel+1;
         }
-
-        counterDiv.innerHTML += `
-            <label for="counterLevel">Level</label>
-            <h2>${nextLevel}</h2>
-        `; 
 }
 
