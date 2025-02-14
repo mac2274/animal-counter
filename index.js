@@ -14,13 +14,29 @@ function countNumber(){
         <h2>${newCount}</h2>
     `;
 
-    if(newCount>10 ){
+    if(newCount>10){
         let newLevel = nextLevel +1;
+
+        if(newCount>20){
+            newLevel = newLevel+1;
         
+            if(newCount>30){
+                newLevel = newLevel+1;
+            
+                if(newCount>40){
+                    newLevel = newLevel+1;
+                }
+            }
+        }
+
+        
+
         counterDiv.innerHTML += `
             <label for="counterLevel">Level</label>
             <h2>${newLevel}</h2>
-        `;  
+        `; 
+
+       
     }
 
  
