@@ -8,6 +8,7 @@ let nextLevel = 0;
 function countNumber(){ 
     count = count+1;
 
+    changeImg();
     insetHTML(); 
     levelCount();
 }
@@ -55,3 +56,8 @@ function levelCount(){
         }
 }
 
+setTimeout(changeImg, 1000);
+
+function changeImg(){
+    image.src =`resources/img/Stag/Stag_2.png`;
+}
