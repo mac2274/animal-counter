@@ -10,7 +10,7 @@ let nextLevel = 0;
 function countNumber(){ 
     count = count+1;
 
-    setTimeout(changeImg, );
+    setTimeout(changeImg, 1000);
 
     insetHTML(); 
     levelCount();
