@@ -59,5 +59,8 @@ function levelCount(){
 setTimeout(changeImg, 1000);
 
 function changeImg(){
-    image.src =`resources/img/Stag/Stag_2.png`;
+    for(let i=0; i<10; i++){
+        image.src =`resources/img/Stag/Stag_1.png`;
+
+    }
 }
