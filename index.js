@@ -10,6 +10,8 @@ let nextLevel = 0;
 function countNumber(){ 
     count = count+1;
 
+    setTimeout(changeImg, 1000);
+
     insetHTML(); 
     levelCount();
 }
@@ -57,10 +59,9 @@ function levelCount(){
         }
 }
 
-setTimeout(changeImg, 5000);
 
 function changeImg(){
-    imgContainer.innerHTML = `<div><img src="${arr2[0]}"></div>`;
+    imgContainer.innerHTML = `<img src="${arr2[0]}">`;
 }
 
 let arr1 = ['resources/img/Stag/Stag_1.png',
