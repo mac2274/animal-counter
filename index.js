@@ -1,5 +1,7 @@
 let image = document.querySelector('#img1');
 let counterDiv = document.querySelector('.counter-container');
+let imgContainer = document.querySelector('.img-container');
+
 
 image.addEventListener('click', countNumber);
 let count = 0;
@@ -55,7 +57,11 @@ function levelCount(){
         }
 }
 
-setTimeout(changeImg, 1000);
+setTimeout(changeImg, 5000);
+
+function changeImg(){
+    imgContainer.innerHTML = `<div><img src="${arr2[0]}"></div>`;
+}
 
 let arr1 = ['resources/img/Stag/Stag_1.png',
     'resources/img/Unicorn/Unicorn_1.png',
@@ -81,6 +87,4 @@ let arr2 = ['resources/img/Stag/Stag_2.png',
     'resources/img/Sheep/Sheep_2.png'
 ];
 
-function changeImg(){
-    
-}
+
