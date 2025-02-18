@@ -8,7 +8,6 @@ let nextLevel = 0;
 function countNumber(){ 
     count = count+1;
 
-    changeImg();
     insetHTML(); 
     levelCount();
 }
@@ -58,9 +57,30 @@ function levelCount(){
 
 setTimeout(changeImg, 1000);
 
-function changeImg(){
-    for(let i=0; i<10; i++){
-        image.src =`resources/img/Stag/Stag_1.png`;
+let arr1 = ['resources/img/Stag/Stag_1.png',
+    'resources/img/Unicorn/Unicorn_1.png',
+    'resources/img/Cat/Cat_1.png',
+    'resources/img/Dragon/Dragon_1.png',
+    'resources/img/Lizard/Lizard_1.png',
+    'resources/img/Octopus/Octopus_1.png',
+    'resources/img/Owl/Owl_1.png',
+    'resources/img/Pig/Pig_1.png',
+    'resources/img/Rainbowdog/Rainbowdog_1.png',
+    'resources/img/Sheep/Sheep_1.png'
+];
 
-    }
+let arr2 = ['resources/img/Stag/Stag_2.png',
+    'resources/img/Unicorn/Unicorn_2.png',
+    'resources/img/Cat/Cat_2.png',
+    'resources/img/Dragon/Dragon_2.png',
+    'resources/img/Lizard/Lizard_2.png',
+    'resources/img/Octopus/Octopus_2.png',
+    'resources/img/Owl/Owl_2.png',
+    'resources/img/Pig/Pig_2.png',
+    'resources/img/Rainbowdog/Rainbowdog_2.png',
+    'resources/img/Sheep/Sheep_2.png'
+];
+
+function changeImg(){
+    
 }
