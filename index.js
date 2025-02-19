@@ -34,7 +34,6 @@ function countNumber(){
     count = count+1;
 
     changeImg();
-
     insetHTML(); 
     levelCount();
 }
@@ -51,42 +50,42 @@ function insetHTML(){
 function levelCount(){
     if(count==10){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[9]}`;
+        image.src = `${arr1[1]}`;
     }else if(count==20){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[0]}`;
+        image.src = `${arr1[2]}`;
     }else if(count==30){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[1]}`;
+        image.src = `${arr1[3]}`;
     }else if(count==40){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[2]}`;
+        image.src = `${arr1[4]}`;
     }else if(count==50){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[3]}`;
+        image.src = `${arr1[5]}`;
     }else if(count==60){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[4]}`;
+        image.src = `${arr1[6]}`;
     }else if(count==70){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[5]}`;
+        image.src = `${arr1[7]}`;
     }else if(count==80){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[6]}`;
+        image.src = `${arr1[8]}`;
     }else if(count==90){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[7]}`;
+        image.src = `${arr1[9]}`;
     }else if(count==100){
         nextLevel = nextLevel+1;
-        image.src = `${arr1[8]}`;
+        image.src = `${arr1[0]}`;
         }
 }
 
 function changeImg(){
     setTimeout(() => {
-        image.src = `${arr2[i]}`;
+        image.src = `${arr2[0]}`;
     }, 100);
-    image.src = `${arr1[i]}`;
+    image.src = `${arr1[0]}`;
 }
 
 
