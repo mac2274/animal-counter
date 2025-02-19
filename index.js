@@ -33,7 +33,6 @@ let nextLevel = 0;
 function countNumber(){ 
     count = count+1;
 
-    changeImg();
     insetHTML(); 
     levelCount();
 }
@@ -48,10 +47,13 @@ function insetHTML(){
 } 
 
 function levelCount(){
+    changeImg();
     if(count==10){
+        changeImg(arr1[1],arr2[1]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[1]}`;
     }else if(count==20){
+        changeImg(arr1[2],arr2[2]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[2]}`;
     }else if(count==30){
