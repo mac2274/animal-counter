@@ -84,8 +84,19 @@ function levelCount(){
 function changeImg(){
     setTimeout(() => {
         image.src = `${arr2[0]}`;
-    }, 200);
+    }, 100);
     image.src = `${arr1[0]}`;
+    if(count==10){
+        setTimeout(() => {
+        image.src = `${arr2[1]}`;
+    }, 100);
+    image.src = `${arr1[1]}`;
+    }else if(count==20){
+        setTimeout(() => {
+            image.src = `${arr2[2]}`;
+        }, 100);
+        image.src = `${arr1[2]}`;
+    }
 }
 
 
