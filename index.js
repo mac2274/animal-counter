@@ -47,45 +47,34 @@ function insetHTML(){
 } 
 
 function levelCount(){
-    changeImg(arr2[0],arr1[0]);
     if(count==10){
-        changeImg(arr2[1],arr1[1]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[1]}`;
     }else if(count==20){
-        changeImg(arr2[2],arr1[2]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[2]}`;
     }else if(count==30){
-        changeImg(arr2[3],arr1[3]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[3]}`;
     }else if(count==40){
-        changeImg(arr2[4],arr1[4]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[4]}`;
     }else if(count==50){
-        changeImg(arr2[5],arr1[5]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[5]}`;
     }else if(count==60){
-        changeImg(arr2[6],arr1[6]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[6]}`;
     }else if(count==70){
-        changeImg(arr2[7],arr1[7]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[7]}`;
     }else if(count==80){
-        changeImg(arr2[8],arr1[8]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[8]}`;
     }else if(count==90){
-        changeImg(arr2[9],arr1[9]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[9]}`;
     }else if(count==100){
-        changeImg(arr2[0],arr1[0]);
         nextLevel = nextLevel+1;
         image.src = `${arr1[0]}`;
         }
@@ -93,9 +82,9 @@ function levelCount(){
 
 function changeImg(){
     setTimeout(() => {
-        image.src = `${arr2[0]}`;
-    }, 100);
-    image.src = `${arr1[0]}`;
+        image.src = `${arr1[0]}`;
+    }, 200);
+    image.src = `${arr2[0]}`;
 }
 
 
