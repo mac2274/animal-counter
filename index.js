@@ -34,6 +34,7 @@ function countNumber(){
     count = count+1;
 
     changeImg();
+
     insetHTML(); 
     levelCount();
 }
@@ -50,53 +51,42 @@ function insetHTML(){
 function levelCount(){
     if(count==10){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Unicorn/Unicorn_1.png";
+        image.src = `${arr1[9]}`;
     }else if(count==20){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Cat/Cat_1.png";
+        image.src = `${arr1[0]}`;
     }else if(count==30){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Dragon/Dragon_1.png";
+        image.src = `${arr1[1]}`;
     }else if(count==40){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Lizard/Lizard_1.png";
+        image.src = `${arr1[2]}`;
     }else if(count==50){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Octopus/Octopus_1.png";
+        image.src = `${arr1[3]}`;
     }else if(count==60){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Owl/Owl_1.png";
+        image.src = `${arr1[4]}`;
     }else if(count==70){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Pig/Pig_1.png";
+        image.src = `${arr1[5]}`;
     }else if(count==80){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Rainbowdog/Rainbowdog_1.png";
+        image.src = `${arr1[6]}`;
     }else if(count==90){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Sheep/Sheep_1.png";
+        image.src = `${arr1[7]}`;
     }else if(count==100){
         nextLevel = nextLevel+1;
-        image.src = "resources/img/Stag/Stag_1.png";
+        image.src = `${arr1[8]}`;
         }
 }
 
 function changeImg(){
     setTimeout(() => {
-        image.src = `${arr2[0]}`;
+        image.src = `${arr2[i]}`;
     }, 100);
-    image.src = `${arr1[0]}`;
-    if(count==10){
-        setTimeout(() => {
-        image.src = `${arr2[1]}`;
-    }, 100);
-    image.src = `${arr1[1]}`;
-    }else if(count==20){
-        setTimeout(() => {
-            image.src = `${arr2[2]}`;
-        }, 100);
-        image.src = `${arr1[2]}`;
-    }
+    image.src = `${arr1[i]}`;
 }
 
 
