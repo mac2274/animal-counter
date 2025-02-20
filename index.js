@@ -47,9 +47,12 @@ function insetHTML(){
 } 
 
 function levelCount(){
+    changeImg();
+
     if(count==10){
         nextLevel = nextLevel+1;
         image.src = `${arr1[1]}`;
+        changeImg(arr2[1],arr2[1]);
     }else if(count==20){
         nextLevel = nextLevel+1;
         image.src = `${arr1[2]}`;
