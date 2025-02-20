@@ -34,6 +34,7 @@ function countNumber(){
     count = count+1;
 
     insetHTML(); 
+    // changeImg(arr1,arr2);
     levelCount();
 }
 
@@ -46,49 +47,54 @@ function insetHTML(){
     `;
 } 
 
-function levelCount(){
-    changeImg();
+// function levelCount(){
+//    if(count==9){
+//         nextLevel = nextLevel+1;
+//         image.src = arr1[1];
+//     }else if(count==19){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[2];
+//     }else if(count==29){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[3];
+//     }else if(count==39){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[4];
+//     }else if(count==49){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[5];
+//     }else if(count==59){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[6];
+//     }else if(count==69){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[7];
+//     }else if(count==79){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[8];
+//     }else if(count==89){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[9];
+//     }else if(count==99){
+//         nextLevel = nextLevel+1;
+//         image.src = arr2[0];
+//     }
+// }
 
-    if(count==10){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[1]}`;
-        changeImg(arr2[1],arr2[1]);
-    }else if(count==20){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[2]}`;
-    }else if(count==30){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[3]}`;
-    }else if(count==40){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[4]}`;
-    }else if(count==50){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[5]}`;
-    }else if(count==60){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[6]}`;
-    }else if(count==70){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[7]}`;
-    }else if(count==80){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[8]}`;
-    }else if(count==90){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[9]}`;
-    }else if(count==100){
-        nextLevel = nextLevel+1;
-        image.src = `${arr1[0]}`;
-        }
-}
+// function changeImg(arr1,arr2){
+//     setTimeout(() => {
+//         image.src = arr1[0];
+//     }, 200);
+//     image.src = arr2[0];
 
-function changeImg(){
-    setTimeout(() => {
-        image.src = `${arr1[0]}`;
-    }, 200);
-    image.src = `${arr2[0]}`;
-}
+//     if(count==10){
+//         setTimeout(() => {
+//             image.src = arr1[1];
+//         }, 200);
+//     image.src = arr2[1];
+//     nextLevel = nextLevel+1;
+//     }
+// }
 
 
 
