@@ -34,8 +34,8 @@ function countNumber(){
     count = count+1;
 
     insetHTML(); 
-    // changeImg(arr1,arr2);
-    levelCount();
+    changeImg(arr1,arr2);
+    // levelCount();
 }
 
 function insetHTML(){
@@ -81,20 +81,20 @@ function insetHTML(){
 //     }
 // }
 
-// function changeImg(arr1,arr2){
-//     setTimeout(() => {
-//         image.src = arr1[0];
-//     }, 200);
-//     image.src = arr2[0];
+ function changeImg(arr1,arr2){
+    setTimeout(() => {
+        image.src = arr2[0];
+    }, 200);
+    image.src = arr1[0];
 
-//     if(count==10){
-//         setTimeout(() => {
-//             image.src = arr1[1];
-//         }, 200);
-//     image.src = arr2[1];
-//     nextLevel = nextLevel+1;
-//     }
-// }
+    if(count==9){
+        nextLevel = nextLevel+1;
+        
+        setTimeout(() => {
+            image.src = arr1[1];
+        }, 200);
+    }image.src = arr2[1];
+}
 
 
 
