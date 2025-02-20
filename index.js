@@ -81,19 +81,23 @@ function insetHTML(){
 //     }
 // }
 
- function changeImg(arr1,arr2){
-    setTimeout(() => {
-        image.src = arr2[0];
-    }, 200);
-    image.src = arr1[0];
+// function bildWechsel(neuesBild, delay){
+//     setTimeout(() => {
+//         image.src = neuesBild;
+//     }, delay)
+// } -chatgpt
 
-    if(count==9){
-        nextLevel = nextLevel+1;
-        
-        setTimeout(() => {
-            image.src = arr1[1];
-        }, 200);
-    }image.src = arr2[1];
+function changeImg(arr1,arr2){
+
+    image.src = arr2[0];
+    setTimeout(() => {
+        image.src =arr1[0];
+        nextLevel++;
+    }, 200);
+
+    if(count==10){
+        image.src = arr1[1];
+    }
 }
 
 
