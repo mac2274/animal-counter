@@ -49,34 +49,34 @@ function insetHTML(){
 } 
 
 function levelCount(){
-   if(count==9){
+   if(count==10){
         nextLevel = nextLevel+1;
         image.src = arr1[1];
-    }else if(count==19){
+    }else if(count==20){
         nextLevel = nextLevel+1;
         image.src = arr2[2];
-    }else if(count==29){
+    }else if(count==30){
         nextLevel = nextLevel+1;
         image.src = arr2[3];
-    }else if(count==39){
+    }else if(count==40){
         nextLevel = nextLevel+1;
         image.src = arr2[4];
-    }else if(count==49){
+    }else if(count==50){
         nextLevel = nextLevel+1;
         image.src = arr2[5];
-    }else if(count==59){
+    }else if(count==60){
         nextLevel = nextLevel+1;
         image.src = arr2[6];
-    }else if(count==69){
+    }else if(count==70){
         nextLevel = nextLevel+1;
         image.src = arr2[7];
-    }else if(count==79){
+    }else if(count==80){
         nextLevel = nextLevel+1;
         image.src = arr2[8];
-    }else if(count==89){
+    }else if(count==90){
         nextLevel = nextLevel+1;
         image.src = arr2[9];
-    }else if(count==99){
+    }else if(count==100){
         nextLevel = nextLevel+1;
         image.src = arr2[0];
     }
@@ -137,6 +137,11 @@ function changeImg(arr1,arr2){
     }
 }
 
-
+// function changeImg(arr1, arr2){
+//     image.src = arr2[nextLevel];
+//     setTimeout(() => {
+//         image.src = arr1[nextLevel];
+//     },200);
+// } //Davids schöne Lösung
 
 
