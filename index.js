@@ -35,7 +35,7 @@ function countNumber(){
 
     insetHTML(); 
     changeImg(arr1,arr2);
-    // levelCount();
+    levelCount();
 }
 
 function insetHTML(){
@@ -81,12 +81,6 @@ function levelCount(){
     }
 }
 
-// function bildWechsel(neuesBild, delay){
-//     setTimeout(() => {
-//         image.src = neuesBild;
-//     }, delay)
-// } -chatgpt
-
 function changeImg(arr1,arr2){
 
     image.src = arr2[0];
@@ -94,9 +88,8 @@ function changeImg(arr1,arr2){
         image.src =arr1[0];
     }, 200);
 
-    if(count==10){
+    if(count<=10){
         image.src = arr1[1];
-        nextLevel = nextLevel+1;
         setTimeout(() => {
             image.src = arr2[1];
         },200);
