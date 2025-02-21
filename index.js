@@ -90,19 +90,19 @@ function changeImg(arr1,arr2){
     }, 200);
 
     if(count>=10){
-        image.src = arr1[1];
+        image.src = arr2[1];
         setTimeout(() => {
-            image.src = arr2[1];
+            image.src = arr1[1];
         },200);
     }if(count>=20){
-        image.src = arr1[2];
+        image.src = arr2[2];
         setTimeout(() => {
-            image.src = arr2[2];
+            image.src = arr1[2];
         },200);
     }if(count>=30){
-        image.src = arr1[3];
+        image.src = arr2[3];
         setTimeout(() => {
-            image.src = arr2[3];
+            image.src = arr1[3];
         },200);
     }
 }
