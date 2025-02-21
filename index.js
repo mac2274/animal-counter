@@ -47,39 +47,39 @@ function insetHTML(){
     `;
 } 
 
-// function levelCount(){
-//    if(count==9){
-//         nextLevel = nextLevel+1;
-//         image.src = arr1[1];
-//     }else if(count==19){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[2];
-//     }else if(count==29){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[3];
-//     }else if(count==39){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[4];
-//     }else if(count==49){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[5];
-//     }else if(count==59){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[6];
-//     }else if(count==69){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[7];
-//     }else if(count==79){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[8];
-//     }else if(count==89){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[9];
-//     }else if(count==99){
-//         nextLevel = nextLevel+1;
-//         image.src = arr2[0];
-//     }
-// }
+function levelCount(){
+   if(count==9){
+        nextLevel = nextLevel+1;
+        image.src = arr1[1];
+    }else if(count==19){
+        nextLevel = nextLevel+1;
+        image.src = arr2[2];
+    }else if(count==29){
+        nextLevel = nextLevel+1;
+        image.src = arr2[3];
+    }else if(count==39){
+        nextLevel = nextLevel+1;
+        image.src = arr2[4];
+    }else if(count==49){
+        nextLevel = nextLevel+1;
+        image.src = arr2[5];
+    }else if(count==59){
+        nextLevel = nextLevel+1;
+        image.src = arr2[6];
+    }else if(count==69){
+        nextLevel = nextLevel+1;
+        image.src = arr2[7];
+    }else if(count==79){
+        nextLevel = nextLevel+1;
+        image.src = arr2[8];
+    }else if(count==89){
+        nextLevel = nextLevel+1;
+        image.src = arr2[9];
+    }else if(count==99){
+        nextLevel = nextLevel+1;
+        image.src = arr2[0];
+    }
+}
 
 // function bildWechsel(neuesBild, delay){
 //     setTimeout(() => {
