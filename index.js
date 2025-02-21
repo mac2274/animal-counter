@@ -92,11 +92,14 @@ function changeImg(arr1,arr2){
     image.src = arr2[0];
     setTimeout(() => {
         image.src =arr1[0];
-        nextLevel++;
     }, 200);
 
     if(count==10){
         image.src = arr1[1];
+        nextLevel = nextLevel+1;
+        setTimeout(() => {
+            image.src = arr2[1];
+        },200);
     }
 }
 
