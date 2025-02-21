@@ -94,8 +94,19 @@ function changeImg(arr1,arr2){
         setTimeout(() => {
             image.src = arr2[1];
         },200);
+    }if(count>=20){
+        image.src = arr1[2];
+        setTimeout(() => {
+            image.src = arr2[2];
+        },200);
+    }if(count>=30){
+        image.src = arr1[3];
+        setTimeout(() => {
+            image.src = arr2[3];
+        },200);
     }
 }
+
 
 
 
