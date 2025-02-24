@@ -31,14 +31,14 @@ image.addEventListener('click', countNumber);
 let count = 0;
 let nextLevel = 0;
 
-backgroundChange();
+
 
 function countNumber(){ 
     count = count+1;
 
     levelCount();
     changeImg(arr1,arr2);
-    
+    backgroundChange();
     insetHTML(); 
 }
 
@@ -148,5 +148,12 @@ function changeImg(arr1,arr2){
 // } //Davids schöne Lösung
 
 function backgroundChange(){
-    body.classList.add('stag');
-}
+    body.classList.toggle('unicorn', count>=10);
+    body.classList.toggle('cat', count>=20);
+    body.classList.toggle('dragon', count>=30);
+    body.classList.toggle('lizard', count>=40);
+    body.classList.toggle('octopus', count>=50);
+    body.classList.toggle('owl', count>=60);
+    body.classList.toggle('pig', count>=70);
+    body.classList.toggle('rainbow', count>=80);
+    body.classList.toggle('sheep', count>=90);}
