@@ -23,6 +23,7 @@ body{
     font-family: 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* background-color for animals */
 .stag{
     background: rgb(255,255,255);
     background: radial-gradient(circle, rgba(255,255,255,1) 3%, rgba(255,102,143,1) 67%, rgba(255,134,218,1) 100%);
@@ -106,5 +107,21 @@ input {
 
 label,
 h2{
-    font-size: 2em;
+    font-size: 135%;
+}
+
+/* animation */
+
+.shaking{
+    transform: translateY(0) translateX(0);
+    animation: transform 0.25s ease alternate;
+}
+
+@keyframes transform {
+    0% {
+    transform: translateY(70px) translateX(-20px);
+    }
+    50% {
+        transform: translateY(-20px) translateX(70px);
+        }
 }

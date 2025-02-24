@@ -85,67 +85,74 @@ function levelCount(){
     }
 }
 
-function changeImg(arr1,arr2){
+// function changeImg(arr1,arr2){
 
-    image.src = arr2[0];
-    setTimeout(() => {
-        image.src = arr1[0];
-    }, 200);
+//     image.src = arr2[0];
+//     image.classList.toggle('shaking');
 
-    if(count>=10){
-        image.src = arr2[1];
-        setTimeout(() => {
-            image.src = arr1[1];
-        },200);
-    }if(count>=20){
-        image.src = arr2[2];
-        setTimeout(() => {
-            image.src = arr1[2];
-        },200);
-    }if(count>=30){
-        image.src = arr2[3];
-        setTimeout(() => {
-            image.src = arr1[3];
-        },200);
-    }if(count>=40){
-        image.src = arr2[4];
-        setTimeout(() => {
-            image.src = arr1[4];
-        },200);
-    }if(count>=50){
-        image.src = arr2[5];
-        setTimeout(() => {
-            image.src = arr1[5];
-        },200);
-    }if(count>=60){
-        image.src = arr2[6];
-        setTimeout(() => {
-            image.src = arr1[6];
-        },200);
-    }if(count>=70){
-        image.src = arr2[7];
-        setTimeout(() => {
-            image.src = arr1[7];
-        },200);
-    }if(count>=80){
-        image.src = arr2[8];
-        setTimeout(() => {
-            image.src = arr1[8];
-        },200);
-    }if(count>=90){
-        image.src = arr2[9];
-        setTimeout(() => {
-            image.src = arr1[9];
-        },200);
-    }
-}
-
-// function changeImg(arr1, arr2){
-//     image.src = arr2[nextLevel];
 //     setTimeout(() => {
-//         image.src = arr1[nextLevel];
-//     },200);
-// } //Davids schöne Lösung
+//         image.src = arr1[0];
+//         image.classList.toggle('shaking');
+//     }, 200);
+
+//     if(count>=10){
+//         image.src = arr2[1];
+//         image.classList.toggle('shaking');
+//         setTimeout(() => {
+//             image.src = arr1[1];
+//             image.classList.toggle('shaking');
+//         },200);
+//     }if(count>=20){
+//         image.src = arr2[2];
+//         setTimeout(() => {
+//             image.src = arr1[2];
+//         },200);
+//     }if(count>=30){
+//         image.src = arr2[3];
+//         setTimeout(() => {
+//             image.src = arr1[3];
+//         },200);
+//     }if(count>=40){
+//         image.src = arr2[4];
+//         setTimeout(() => {
+//             image.src = arr1[4];
+//         },200);
+//     }if(count>=50){
+//         image.src = arr2[5];
+//         setTimeout(() => {
+//             image.src = arr1[5];
+//         },200);
+//     }if(count>=60){
+//         image.src = arr2[6];
+//         setTimeout(() => {
+//             image.src = arr1[6];
+//         },200);
+//     }if(count>=70){
+//         image.src = arr2[7];
+//         setTimeout(() => {
+//             image.src = arr1[7];
+//         },200);
+//     }if(count>=80){
+//         image.src = arr2[8];
+//         setTimeout(() => {
+//             image.src = arr1[8];
+//         },200);
+//     }if(count>=90){
+//         image.src = arr2[9];
+//         setTimeout(() => {
+//             image.src = arr1[9];
+//         },200);
+//     }
+// }
+
+function changeImg(arr1, arr2){
+    image.src = arr2[nextLevel];
+    image.classList.toggle('shaking');
+    setTimeout(() => {
+        image.src = arr1[nextLevel];
+        image.classList.toggle('shaking');
+    },200);
+} //Davids schöne Lösung
 
 function backgroundChange(){
     body.classList.toggle('unicorn', count>=10);
