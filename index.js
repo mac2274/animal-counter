@@ -1,6 +1,7 @@
 let image = document.querySelector('#img1');
 let counterDiv = document.querySelector('.counter-container');
 let imgContainer = document.querySelector('.img-container');
+let bodyColor = document.querySelector('body');
 
 let arr1 = ['resources/img/Stag/Stag_1.png',
     'resources/img/Unicorn/Unicorn_1.png',
