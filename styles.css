@@ -4,7 +4,7 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    src: url('resources/font-raleway/raleway-v34-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('resources/fonts/raleway/raleway-v34-latin-800.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
   /* raleway-800 - latin */
   @font-face {
@@ -12,7 +12,16 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 800;
-    src: url('resources/font-raleway/raleway-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+    src: url('resources/fonts/raleway/raleway-v34-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  }
+
+  /* luckiest-guy-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Luckiest Guy';
+    font-style: normal;
+    font-weight: 400;
+    src: url('resources/fonts/luckiest-guy-v23-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
 
 body{       
@@ -103,6 +112,12 @@ input {
     justify-content: center;
     width: 100%;
     height: auto;
+}
+
+/* header */
+
+h1{
+    font-family:  'Luckiest Guy', 'Raleway', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 label,
