@@ -86,7 +86,7 @@ body{
 }
 
 #main-container{
-    width: 60%;
+    xwidth: 60%;
     height: 100%;
     display: flex;
     align-items: center;
