@@ -1,7 +1,7 @@
 let image = document.querySelector('#img1');
 let counterDiv = document.querySelector('.counter-container');
 let imgContainer = document.querySelector('.img-container');
-let bodyColor = document.querySelector('body');
+let body = document.querySelector('body');
 
 let arr1 = ['resources/img/Stag/Stag_1.png',
     'resources/img/Unicorn/Unicorn_1.png',
@@ -31,11 +31,14 @@ image.addEventListener('click', countNumber);
 let count = 0;
 let nextLevel = 0;
 
+backgroundChange();
+
 function countNumber(){ 
     count = count+1;
 
     levelCount();
     changeImg(arr1,arr2);
+    
     insetHTML(); 
 }
 
@@ -144,4 +147,6 @@ function changeImg(arr1,arr2){
 //     },200);
 // } //Davids schöne Lösung
 
-
+function backgroundChange(){
+    body.classList.add('stag');
+}
