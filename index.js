@@ -33,10 +33,9 @@ let nextLevel = 0;
 function countNumber(){ 
     count = count+1;
 
-    insetHTML(); 
     levelCount();
     changeImg(arr1,arr2);
-    
+    insetHTML(); 
 }
 
 function insetHTML(){
@@ -84,9 +83,9 @@ function levelCount(){
 
 function changeImg(arr1,arr2){
 
-    image.src = arr2[nextLevel];
+    image.src = arr2[0];
     setTimeout(() => {
-        image.src = arr1[nextLevel];
+        image.src = arr1[0];
     }, 200);
 
     if(count>=10){
