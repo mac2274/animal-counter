@@ -35,9 +35,10 @@ let nextLevel = 0;
 
 function countNumber(){ 
     count = count+1;
-
-    levelCount();
+    
     changeImg(arr1,arr2);
+    levelCount();
+    
     backgroundChange();
     insetHTML(); 
 }
