@@ -131,9 +131,21 @@ h2{
 
 @keyframes transform {
     0% {
-    transform: translateY(70px) translateX(-20px);
+        transform: translateY(70px) translateX(-20px);
     }
     50% {
         transform: translateY(-20px) translateX(70px);
-        }
+    }
+}
+
+.winner {
+    background: url('https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbGg0NWFqZDVoaDRlenB5eXkycTQ1aThjcWlnODM5dzFqZGc5ZXJsOCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/26tOZ42Mg6pbTUPHW/giphy.gif') no-repeat;
+    background-size: cover;
+}
+
+#winnerText {
+    color: #fff;
+    font-size: 5em;
+    width: 50%;
+    background: #4f4e4e;
 }

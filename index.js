@@ -28,19 +28,20 @@ let arr2 = ['resources/img/Stag/Stag_2.png',
 ];
 
 image.addEventListener('click', countNumber);
-let count = 0;
+let count = 99;
 let nextLevel = 0;
 
 
 
 function countNumber(){ 
     count = count+1;
-    
-    changeImg(arr1,arr2);
     levelCount();
+    changeImg(arr1,arr2);
+    
     
     backgroundChange();
     insetHTML(); 
+    goalreached();
 }
 
 function insetHTML(){
@@ -55,34 +56,32 @@ function insetHTML(){
 function levelCount(){
    if(count==10){
         nextLevel = nextLevel+1;
-        image.src = arr1[1];
+        image.src = arr1[nextLevel];
     }else if(count==20){
         nextLevel = nextLevel+1;
-        image.src = arr2[2];
+        image.src = arr2[nextLevel];
     }else if(count==30){
         nextLevel = nextLevel+1;
-        image.src = arr2[3];
+        image.src = arr2[nextLevel];
     }else if(count==40){
         nextLevel = nextLevel+1;
-        image.src = arr2[4];
+        image.src = arr2[nextLevel];
     }else if(count==50){
         nextLevel = nextLevel+1;
-        image.src = arr2[5];
+        image.src = arr2[nextLevel];
     }else if(count==60){
         nextLevel = nextLevel+1;
-        image.src = arr2[6];
+        image.src = arr2[nextLevel];
     }else if(count==70){
         nextLevel = nextLevel+1;
-        image.src = arr2[7];
+        image.src = arr2[nextLevel];
     }else if(count==80){
         nextLevel = nextLevel+1;
-        image.src = arr2[8];
+        image.src = arr2[nextLevel];
     }else if(count==90){
         nextLevel = nextLevel+1;
-        image.src = arr2[9];
+        image.src = arr2[nextLevel];
     }else if(count==100){
-        nextLevel = nextLevel+1;
-        image.src = arr2[0];
     }
 }
 
@@ -165,3 +164,20 @@ function backgroundChange(){
     body.classList.toggle('pig', count>=70);
     body.classList.toggle('rainbow', count>=80);
     body.classList.toggle('sheep', count>=90);}
+
+function goalreached(){
+    if(count==100){
+        image.src = 0;
+        let mainContainer = document.querySelector('#main-container');
+
+        body.classList.add('winner');
+        mainContainer.innerHTML = `<div id="winnerText">
+            </div>`;
+
+        setTimeout(() => {
+            let winnerContainer = document.querySelector('#winnerText');
+            winnerContainer.innerHTML = <p>Glückwunsch!! DU hast gewonnen!</p>
+        }, 1000);
+        
+    }
+}
