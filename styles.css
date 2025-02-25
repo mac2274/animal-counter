@@ -144,8 +144,34 @@ h2{
 }
 
 #winnerText {
-    color: #fff;
-    font-size: 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000;
+    font-size: 3em;
     width: 50%;
-    background: #4f4e4e;
+    height: fit-content;
+    background: #e3e2e2c9;
+    padding: 2%;
+    border-radius: 30px;
+
+    p{
+        text-align: center;
+    }
 }
+
+button{
+    padding: 25px;
+    border-radius: 20px;
+    border: none;
+    background: #8b4bac;
+    color: #fff;
+    font-size: 0.7em;
+    width: 60%;
+    
+    &:hover{
+      transition: background 0.5s ease-out, color 0.5s ease-out;
+      background: #e6b96f;
+      color: #000;
+    }
+  }

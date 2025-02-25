@@ -171,13 +171,19 @@ function goalreached(){
         let mainContainer = document.querySelector('#main-container');
 
         body.classList.add('winner');
-        mainContainer.innerHTML = `<div id="winnerText">
-            </div>`;
-
+        
         setTimeout(() => {
-            let winnerContainer = document.querySelector('#winnerText');
-            winnerContainer.innerHTML = <p>Glückwunsch!! DU hast gewonnen!</p>
+            mainContainer.innerHTML = `<div id="winnerText">
+            <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
+            
+            <button>Nochmal spielen</button>
+            </div>`;
         }, 1000);
+
+        // setTimeout(() => {
+        //     let winnerContainer = document.querySelector('#winnerText');
+        //     winnerContainer.innerHTML = <p>Glückwunsch!! DU hast gewonnen!</p>
+        // }, 1000);
         
     }
 }
