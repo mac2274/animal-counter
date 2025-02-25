@@ -161,13 +161,13 @@ h2{
 }
 
 button{
-    padding: 25px;
+    padding: 20px;
     border-radius: 20px;
     border: none;
     background: #8b4bac;
     color: #fff;
-    font-size: 0.7em;
-    width: 60%;
+    font-size: 0.5em;
+    width: 50%;
     
     &:hover{
       transition: background 0.5s ease-out, color 0.5s ease-out;

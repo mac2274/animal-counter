@@ -56,7 +56,7 @@ function insetHTML(){
 function levelCount(){
    if(count==10){
         nextLevel = nextLevel+1;
-        image.src = arr1[nextLevel];
+        image.src = " ";
     }else if(count==20){
         nextLevel = nextLevel+1;
         image.src = arr2[nextLevel];
@@ -82,6 +82,7 @@ function levelCount(){
         nextLevel = nextLevel+1;
         image.src = arr2[nextLevel];
     }else if(count==100){
+        image.src = "";
     }
 }
 
@@ -169,21 +170,22 @@ function goalreached(){
     if(count==100){
         image.src = 0;
         let mainContainer = document.querySelector('#main-container');
-
+       
         body.classList.add('winner');
+
         
         setTimeout(() => {
             mainContainer.innerHTML = `<div id="winnerText">
             <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
-            
-            <button>Nochmal spielen</button>
+            <button id="push">Nochmal spielen</button>
             </div>`;
         }, 1000);
 
-        // setTimeout(() => {
-        //     let winnerContainer = document.querySelector('#winnerText');
-        //     winnerContainer.innerHTML = <p>Glückwunsch!! DU hast gewonnen!</p>
-        // }, 1000);
-        
+        let buttonFunction = document.querySelector('#push');
+
+        buttonFunction.addEventListener('click', () => {
+            count == 0;
+            levelCount == 0;
+        });
     }
 }
