@@ -31,8 +31,6 @@ image.addEventListener('click', countNumber);
 let count = 99;
 let nextLevel = 0;
 
-
-
 function countNumber(){ 
     count = count+1;
     levelCount();
@@ -163,60 +161,80 @@ function backgroundChange(){
     body.classList.toggle('rainbow', count>=80);
     body.classList.toggle('sheep', count>=90);}
 
-function goalreached(){
-    image.src = 0;
-    let mainContainer = document.querySelector('#main-container');
-    body.classList.add('winner');
+// function goalreached(){
+//     image.src = 0;
+//     let mainContainer = document.querySelector('#main-container');
+//     body.classList.add('winner');
 
-        // setTimeout(() => {
-        //     mainContainer.innerHTML = `
-        //         <div id="winnerText">
-        //             <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
-        //             <button id="push" onclick="reset()">Nochmal spielen</button>
-        //         </div>
-        //         `;
-        // }, 1000); -  zweite Alternative mit funktion reset ()
+//         // setTimeout(() => {
+//         //     mainContainer.innerHTML = `
+//         //         <div id="winnerText">
+//         //             <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
+//         //             <button id="push" onclick="reset()">Nochmal spielen</button>
+//         //         </div>
+//         //         `;
+//         // }, 1000); -  zweite Alternative mit funktion reset ()
 
-        setTimeout(() => {
-            mainContainer.innerHTML = `<div id="winnerText">
-                <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
-                <button id="push">Nochmal spielen</button>
-                </div>
-                `;
+//         setTimeout(() => {
+//             mainContainer.innerHTML = `<div id="winnerText">
+//                 <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
+//                 <button id="push">Nochmal spielen</button>
+//                 </div>
+//                 `;
 
-            let buttonFunction = document.querySelector('#push');
+//             let buttonFunction = document.querySelector('#push');
 
-            buttonFunction.addEventListener('click', () => {
-                count = 0;
-                levelCount = 0;
+//             buttonFunction.addEventListener('click', () => {
+//                 count = 0;
+//                 nextLevel = 0;
 
-                body.classList.remove('winner');
-                mainContainer.innerHTML = `
-                <div class="container">
-                    <h1>Animal Hit Counter</h1>
-                    </div>
-                    <div class="counter-container">
-                        <label for="counter">Hit</label>
-                            <input type="number" id="counter">
-                            <h2>0</h2>
-                        <label for="counterLevel">Level</label>
-                            <input type="number">
-                            <h2>0</h2>
-                    </div>
-                    <div class="img-container">
-                        <img src="resources/img/Stag/Stag_1.png" id="img1" alt="Gesicht von einem gezeichneten Hirsch">
-                </div> 
-                `;
-                countNumber();
-            });
+//                 body.classList.remove('winner');
+//                 mainContainer.innerHTML = `
+//                 <div class="container">
+//                     <h1>Animal Hit Counter</h1>
+//                     </div>
+//                     <div class="counter-container">
+//                         <label for="counter">Hit</label>
+//                             <input type="number" id="counter">
+//                             <h2>0</h2>
+//                         <label for="counterLevel">Level</label>
+//                             <input type="number">
+//                             <h2>0</h2>
+//                     </div>
+//                     <div class="img-container">
+//                         <img src="resources/img/Stag/Stag_1.png" id="img1" alt="Gesicht von einem gezeichneten Hirsch">
+//                 </div> 
+//                 `;
+//                 countNumber();
+//             });
             
-        }, 200); //der Hirsch wird noch angezeigt, wegen der Verzögerung       
-}
+//         }, 200); //der Hirsch wird noch angezeigt, wegen der Verzögerung       
+// }
 
 // function reset() {
 //     count = 0;
 //     levelCount = 0;
-// }
+// } //mein ansatz...
+
+let winnerContainer = document.querySelector("#winnerText");
+let mainContainer = document.querySelector("#main-container");
+let resetButton = document.querySelector("#push");
+resetButton.addEventListener("click", reset);
+
+function goalreached() {
+  image.src = 0;
+
+  mainContainer.classList.add("hidden");
+  winnerContainer.classList.remove("hidden");
+}
+
+function reset() {
+  mainContainer.classList.remove("hidden");
+  winnerContainer.classList.add("hidden");
+  nextLevel = 0;
+  count = 0;
+  insetHTML(); // Davids Lösunng
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     let buttonFunction = document.querySelector("#push");

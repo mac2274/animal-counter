@@ -175,3 +175,9 @@ button{
       color: #000;
     }
   }
+
+  /* overlay */
+  .hidden {
+    display: none !important;
+  }
+  
