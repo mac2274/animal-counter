@@ -28,7 +28,7 @@ let arr2 = ['resources/img/Stag/Stag_2.png',
 ];
 
 image.addEventListener('click', countNumber);
-let count = 99;
+let count = 0;
 let nextLevel = 0;
 
 function countNumber(){ 
@@ -41,10 +41,14 @@ function countNumber(){
 
 function insetHTML(){
     counterDiv.innerHTML = `
-        <label for="counter">Hit</label>
-        <h2>${count}</h2>
-        <label for="counter">Level</label>
-        <h2>${nextLevel}</h2>
+        <div class="input-container">
+            <label for="counter">Hit</label>
+            <h2>${count}</h2>
+        </div>
+        <div class="input-container">
+            <label for="counter">Level</label>
+            <h2>${nextLevel}</h2>
+        </div>
     `;
 } 
 
