@@ -37,11 +37,8 @@ function countNumber(){
     count = count+1;
     levelCount();
     changeImg(arr1,arr2);
-    
-    
     backgroundChange();
     insetHTML(); 
-    goalreached();
 }
 
 function insetHTML(){
@@ -82,7 +79,7 @@ function levelCount(){
         nextLevel = nextLevel+1;
         image.src = arr2[nextLevel];
     }else if(count==100){
-        image.src = "";
+        goalreached();
     }
 }
 
@@ -167,25 +164,106 @@ function backgroundChange(){
     body.classList.toggle('sheep', count>=90);}
 
 function goalreached(){
-    if(count==100){
-        image.src = 0;
-        let mainContainer = document.querySelector('#main-container');
-       
-        body.classList.add('winner');
+    image.src = 0;
+    let mainContainer = document.querySelector('#main-container');
+    body.classList.add('winner');
 
-        
+        // setTimeout(() => {
+        //     mainContainer.innerHTML = `
+        //         <div id="winnerText">
+        //             <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
+        //             <button id="push" onclick="reset()">Nochmal spielen</button>
+        //         </div>
+        //         `;
+        // }, 1000); -  zweite Alternative mit funktion reset ()
+
         setTimeout(() => {
             mainContainer.innerHTML = `<div id="winnerText">
-            <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
-            <button id="push">Nochmal spielen</button>
-            </div>`;
-        }, 1000);
+                <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
+                <button id="push">Nochmal spielen</button>
+                </div>
+                `;
 
-        let buttonFunction = document.querySelector('#push');
+            let buttonFunction = document.querySelector('#push');
 
-        buttonFunction.addEventListener('click', () => {
-            count == 0;
-            levelCount == 0;
-        });
-    }
+            buttonFunction.addEventListener('click', () => {
+                count = 0;
+                levelCount = 0;
+
+                body.classList.remove('winner');
+                mainContainer.innerHTML = `
+                <div class="container">
+                    <h1>Animal Hit Counter</h1>
+                    </div>
+                    <div class="counter-container">
+                        <label for="counter">Hit</label>
+                            <input type="number" id="counter">
+                            <h2>0</h2>
+                        <label for="counterLevel">Level</label>
+                            <input type="number">
+                            <h2>0</h2>
+                    </div>
+                    <div class="img-container">
+                        <img src="resources/img/Stag/Stag_1.png" id="img1" alt="Gesicht von einem gezeichneten Hirsch">
+                </div> 
+                `;
+                countNumber();
+            });
+            
+        }, 200); //der Hirsch wird noch angezeigt, wegen der Verzögerung       
 }
+
+// function reset() {
+//     count = 0;
+//     levelCount = 0;
+// }
+
+document.addEventListener("DOMContentLoaded", () => {
+    let buttonFunction = document.querySelector("#push");
+
+    if (!buttonFunction) {
+        console.error("❌ Fehler: Button mit ID #push wurde nicht gefunden!");
+        return;
+    }
+
+    buttonFunction.addEventListener("click", () => {
+        console.log("✅ Button wurde geklickt!");
+
+        try {
+            insetHTML(); // Falls hier ein Fehler ist, wird er gefangen
+        } catch (e) {
+            console.error("❌ Fehler in insetHTML():", e);
+        }
+
+        try {
+            countNumber();
+        } catch (e) {
+            console.error("❌ Fehler in countNumber():", e);
+        }
+
+        if (typeof mainContainer === "undefined") {
+            console.error("❌ Fehler: mainContainer ist nicht definiert!");
+        } else {
+            mainContainer.innerHTML = "";
+        }
+
+        if (typeof body === "undefined") {
+            console.error("❌ Fehler: body ist nicht definiert!");
+        } else {
+            body.classList.remove("winner");
+            body.classList.add("stag");
+        }
+
+        if (typeof count === "undefined") {
+            console.error("❌ Fehler: count ist nicht definiert!");
+        } else {
+            count = 0;
+        }
+
+        if (typeof levelCount === "undefined") {
+            console.error("❌ Fehler: levelCount ist nicht definiert!");
+        } else {
+            levelCount = 0;
+        }
+    });
+});
