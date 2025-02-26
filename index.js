@@ -219,6 +219,7 @@ function backgroundChange(){
 let winnerContainer = document.querySelector("#winnerText");
 let mainContainer = document.querySelector("#main-container");
 let resetButton = document.querySelector("#push");
+
 resetButton.addEventListener("click", reset);
 
 function goalreached() {
@@ -235,53 +236,3 @@ function reset() {
   count = 0;
   insetHTML(); // Davids Lösunng
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    let buttonFunction = document.querySelector("#push");
-
-    if (!buttonFunction) {
-        console.error("❌ Fehler: Button mit ID #push wurde nicht gefunden!");
-        return;
-    }
-
-    buttonFunction.addEventListener("click", () => {
-        console.log("✅ Button wurde geklickt!");
-
-        try {
-            insetHTML(); // Falls hier ein Fehler ist, wird er gefangen
-        } catch (e) {
-            console.error("❌ Fehler in insetHTML():", e);
-        }
-
-        try {
-            countNumber();
-        } catch (e) {
-            console.error("❌ Fehler in countNumber():", e);
-        }
-
-        if (typeof mainContainer === "undefined") {
-            console.error("❌ Fehler: mainContainer ist nicht definiert!");
-        } else {
-            mainContainer.innerHTML = "";
-        }
-
-        if (typeof body === "undefined") {
-            console.error("❌ Fehler: body ist nicht definiert!");
-        } else {
-            body.classList.remove("winner");
-            body.classList.add("stag");
-        }
-
-        if (typeof count === "undefined") {
-            console.error("❌ Fehler: count ist nicht definiert!");
-        } else {
-            count = 0;
-        }
-
-        if (typeof levelCount === "undefined") {
-            console.error("❌ Fehler: levelCount ist nicht definiert!");
-        } else {
-            levelCount = 0;
-        }
-    });
-});
