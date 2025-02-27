@@ -2,6 +2,9 @@ let image = document.querySelector('#img1');
 let counterDiv = document.querySelector('.counter-container');
 let imgContainer = document.querySelector('.img-container');
 let body = document.querySelector('body');
+let winnerContainer = document.querySelector("#winnerText");
+let mainContainer = document.querySelector("#main-container");
+let resetButton = document.querySelector("#push");
 
 let arr1 = ['resources/img/Stag/Stag_1.png',
     'resources/img/Unicorn/Unicorn_1.png',
@@ -85,66 +88,6 @@ function levelCount(){
     }
 }
 
-// function changeImg(arr1,arr2){
-
-//     image.src = arr2[0];
-//     image.classList.toggle('shaking');
-
-//     setTimeout(() => {
-//         image.src = arr1[0];
-//         image.classList.toggle('shaking');
-//     }, 200);
-
-//     if(count>=10){
-//         image.src = arr2[1];
-//         image.classList.toggle('shaking');
-//         setTimeout(() => {
-//             image.src = arr1[1];
-//             image.classList.toggle('shaking');
-//         },200);
-//     }if(count>=20){
-//         image.src = arr2[2];
-//         setTimeout(() => {
-//             image.src = arr1[2];
-//         },200);
-//     }if(count>=30){
-//         image.src = arr2[3];
-//         setTimeout(() => {
-//             image.src = arr1[3];
-//         },200);
-//     }if(count>=40){
-//         image.src = arr2[4];
-//         setTimeout(() => {
-//             image.src = arr1[4];
-//         },200);
-//     }if(count>=50){
-//         image.src = arr2[5];
-//         setTimeout(() => {
-//             image.src = arr1[5];
-//         },200);
-//     }if(count>=60){
-//         image.src = arr2[6];
-//         setTimeout(() => {
-//             image.src = arr1[6];
-//         },200);
-//     }if(count>=70){
-//         image.src = arr2[7];
-//         setTimeout(() => {
-//             image.src = arr1[7];
-//         },200);
-//     }if(count>=80){
-//         image.src = arr2[8];
-//         setTimeout(() => {
-//             image.src = arr1[8];
-//         },200);
-//     }if(count>=90){
-//         image.src = arr2[9];
-//         setTimeout(() => {
-//             image.src = arr1[9];
-//         },200);
-//     }
-// }
-
 function changeImg(arr1, arr2){
     image.src = arr2[nextLevel];
     image.classList.toggle('shaking');
@@ -152,7 +95,7 @@ function changeImg(arr1, arr2){
         image.src = arr1[nextLevel];
         image.classList.toggle('shaking');
     },200);
-} //Davids schöne Lösung
+}
 
 function backgroundChange(){
     body.classList.toggle('unicorn', count>=10);
@@ -164,65 +107,6 @@ function backgroundChange(){
     body.classList.toggle('pig', count>=70);
     body.classList.toggle('rainbow', count>=80);
     body.classList.toggle('sheep', count>=90);}
-
-// function goalreached(){
-//     image.src = 0;
-//     let mainContainer = document.querySelector('#main-container');
-//     body.classList.add('winner');
-
-//         // setTimeout(() => {
-//         //     mainContainer.innerHTML = `
-//         //         <div id="winnerText">
-//         //             <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
-//         //             <button id="push" onclick="reset()">Nochmal spielen</button>
-//         //         </div>
-//         //         `;
-//         // }, 1000); -  zweite Alternative mit funktion reset ()
-
-//         setTimeout(() => {
-//             mainContainer.innerHTML = `<div id="winnerText">
-//                 <p>Herzlichen Glückwunch! <br> DU hast gewonnen!</p>
-//                 <button id="push">Nochmal spielen</button>
-//                 </div>
-//                 `;
-
-//             let buttonFunction = document.querySelector('#push');
-
-//             buttonFunction.addEventListener('click', () => {
-//                 count = 0;
-//                 nextLevel = 0;
-
-//                 body.classList.remove('winner');
-//                 mainContainer.innerHTML = `
-//                 <div class="container">
-//                     <h1>Animal Hit Counter</h1>
-//                     </div>
-//                     <div class="counter-container">
-//                         <label for="counter">Hit</label>
-//                             <input type="number" id="counter">
-//                             <h2>0</h2>
-//                         <label for="counterLevel">Level</label>
-//                             <input type="number">
-//                             <h2>0</h2>
-//                     </div>
-//                     <div class="img-container">
-//                         <img src="resources/img/Stag/Stag_1.png" id="img1" alt="Gesicht von einem gezeichneten Hirsch">
-//                 </div> 
-//                 `;
-//                 countNumber();
-//             });
-            
-//         }, 200); //der Hirsch wird noch angezeigt, wegen der Verzögerung       
-// }
-
-// function reset() {
-//     count = 0;
-//     levelCount = 0;
-// } //mein ansatz...
-
-let winnerContainer = document.querySelector("#winnerText");
-let mainContainer = document.querySelector("#main-container");
-let resetButton = document.querySelector("#push");
 
 resetButton.addEventListener("click", reset);
     function goalreached() {
@@ -239,5 +123,5 @@ function reset() {
 
     nextLevel = 0;
     count = 0;
-    insetHTML(); // Davids Lösunng
+    insetHTML();
 }
