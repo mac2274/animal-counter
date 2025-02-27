@@ -36,7 +36,7 @@ let arr2 = ['resources/img/Stag/Stag_2.png',
 
 image.addEventListener('click', countNumber);
 
-
+/* main function for handling clicks */ */
 function countNumber(){ 
     count = count+1;
     levelCount();
@@ -45,6 +45,7 @@ function countNumber(){
     insetHTML(); 
 }
 
+/* function for levelups and goalReached() function */
 function levelCount(){
    if(count==10){
         nextLevel = nextLevel+1;
@@ -80,6 +81,7 @@ function levelCount(){
     }
 }
 
+/* adding blinking of characters */ 
 function changeImg(arr1, arr2){
     image.src = arr2[nextLevel];
     image.classList.toggle('shaking');
@@ -89,6 +91,7 @@ function changeImg(arr1, arr2){
     },200);
 }
 
+/* add background change while switching characters */
 function backgroundChange(){
     body.classList.toggle('unicorn', count>=10);
     body.classList.toggle('cat', count>=20);
@@ -100,6 +103,7 @@ function backgroundChange(){
     body.classList.toggle('rainbow', count>=80);
     body.classList.toggle('sheep', count>=90);}
 
+/* setting innerHTML */    
 function insetHTML(){
     counterDiv.innerHTML = `
         <div class="input-container">
@@ -113,6 +117,7 @@ function insetHTML(){
     `;
 } 
 
+/* handling reset button */
 resetButton.addEventListener("click", reset);
     function goalreached() {
     image.src = 0;
@@ -122,6 +127,7 @@ resetButton.addEventListener("click", reset);
     body.classList.add('center');
 }
 
+/* resetting the gam */
 function reset() {
     mainContainer.classList.remove("hidden");
     winnerContainer.classList.add("hidden");
