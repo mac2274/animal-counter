@@ -74,6 +74,8 @@ function levelCount(){
         nextLevel = nextLevel+1;
         image.src = arr2[nextLevel];
     }else if(count==100){
+        nextLevel = nextLevel+1;
+        image.src == arr2[0];
         goalreached();
     }
 }
@@ -126,5 +128,4 @@ function reset() {
 
     nextLevel = 0;
     count = 0;
-    countNumber();
 }
