@@ -2,6 +2,10 @@ let image = document.querySelector('#img1');
 let counterDiv = document.querySelector('.counter-container');
 let imgContainer = document.querySelector('.img-container');
 let body = document.querySelector('body');
+
+let count = 99;  
+let nextLevel = 0;
+
 let winnerContainer = document.querySelector("#winnerText");
 let mainContainer = document.querySelector("#main-container");
 let resetButton = document.querySelector("#push");
@@ -31,8 +35,7 @@ let arr2 = ['resources/img/Stag/Stag_2.png',
 ];
 
 image.addEventListener('click', countNumber);
-let count = 99;
-let nextLevel = 0;
+
 
 function countNumber(){ 
     count = count+1;
@@ -41,19 +44,6 @@ function countNumber(){
     backgroundChange();
     insetHTML(); 
 }
-
-function insetHTML(){
-    counterDiv.innerHTML = `
-        <div class="input-container">
-            <label for="counter">Hit</label>
-            <h2>${count}</h2>
-        </div>
-        <div class="input-container">
-            <label for="counter">Level</label>
-            <h2>${nextLevel}</h2>
-        </div>
-    `;
-} 
 
 function levelCount(){
    if(count==10){
@@ -108,6 +98,19 @@ function backgroundChange(){
     body.classList.toggle('rainbow', count>=80);
     body.classList.toggle('sheep', count>=90);}
 
+function insetHTML(){
+    counterDiv.innerHTML = `
+        <div class="input-container">
+            <label for="counter">Hit</label>
+            <h2>${count}</h2>
+        </div>
+        <div class="input-container">
+            <label for="counter">Level</label>
+            <h2>${nextLevel}</h2>
+        </div>
+    `;
+} 
+
 resetButton.addEventListener("click", reset);
     function goalreached() {
     image.src = 0;
@@ -123,5 +126,5 @@ function reset() {
 
     nextLevel = 0;
     count = 0;
-    insetHTML();
+    countNumber();
 }
