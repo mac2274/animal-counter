@@ -28,7 +28,7 @@ let arr2 = ['resources/img/Stag/Stag_2.png',
 ];
 
 image.addEventListener('click', countNumber);
-let count = 0;
+let count = 99;
 let nextLevel = 0;
 
 function countNumber(){ 
@@ -225,18 +225,19 @@ let mainContainer = document.querySelector("#main-container");
 let resetButton = document.querySelector("#push");
 
 resetButton.addEventListener("click", reset);
+    function goalreached() {
+    image.src = 0;
 
-function goalreached() {
-  image.src = 0;
-
-  mainContainer.classList.add("hidden");
-  winnerContainer.classList.remove("hidden");
+    mainContainer.classList.add("hidden");
+    winnerContainer.classList.remove("hidden");
+    body.classList.add('center');
 }
 
 function reset() {
-  mainContainer.classList.remove("hidden");
-  winnerContainer.classList.add("hidden");
-  nextLevel = 0;
-  count = 0;
-  insetHTML(); // Davids Lösunng
+    mainContainer.classList.remove("hidden");
+    winnerContainer.classList.add("hidden");
+
+    nextLevel = 0;
+    count = 0;
+    insetHTML(); // Davids Lösunng
 }
