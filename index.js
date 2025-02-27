@@ -3,7 +3,7 @@ let counterDiv = document.querySelector('.counter-container');
 let imgContainer = document.querySelector('.img-container');
 let body = document.querySelector('body');
 
-let count = 99;  
+let count = 0;  
 let nextLevel = 0;
 
 let winnerContainer = document.querySelector("#winnerText");
@@ -75,7 +75,7 @@ function levelCount(){
         image.src = arr2[nextLevel];
     }else if(count==100){
         nextLevel = nextLevel+1;
-        image.src == arr2[0];
+        image.src == arr1[0];
         goalreached();
     }
 }
@@ -126,6 +126,6 @@ function reset() {
     mainContainer.classList.remove("hidden");
     winnerContainer.classList.add("hidden");
 
-    nextLevel = 0;
     count = 0;
+    nextLevel = 0;
 }
